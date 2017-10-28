@@ -24,9 +24,9 @@
   :effect       (and (Em ?loc2) (not (Em ?loc1)) )
  )
 
- (:action pintar :parameters (?loc1)
-  :precondition (and (Em ?loc1) (Sala ?loc1) (Branca ?loc1) (Escada ?loc1) (Tinta ?loc1))
-  :effect       (and (Em ?loc1) (Sala ?loc1) (Azul ?loc1)   (Escada ?loc1) (Tinta ?loc1))
+ (:action pintar_de_azul :parameters (?loc1)
+  :precondition (and (Em ?loc1) (Sala ?loc1) (Branca ?loc1) (Escada ?loc1) (TintaAzul ?loc1))
+  :effect       (and (Em ?loc1) (Sala ?loc1) (Azul ?loc1)   (Escada ?loc1) (TintaAzul ?loc1))
  )
 
  (:action mover_escada :parameters (?loc1 ?loc2)
@@ -45,17 +45,17 @@
  )
 
  (:action mover_tinta :parameters (?loc1 ?loc2)
-  :precondition (and (Em ?loc1) (Deposito ?loc1) (Corredor ?loc2) (Tinta ?loc1))
-  :effect       (and (Em ?loc2) (not (Em ?loc1))                  (Tinta ?loc2) (not (Tinta ?loc1)) )
+  :precondition (and (Em ?loc1) (Deposito ?loc1) (Corredor ?loc2) (TintaAzul ?loc1))
+  :effect       (and (Em ?loc2) (not (Em ?loc1))                  (TintaAzul ?loc2) (not (TintaAzul ?loc1)) )
  )
 
  (:action mover_tinta_2 :parameters (?loc1 ?loc2)
-  :precondition (and (Em ?loc1) (Corredor ?loc1) (Sala ?loc2) (Tinta ?loc1))
-  :effect       (and (Em ?loc2) (not (Em ?loc1))              (Tinta ?loc2) (not (Tinta ?loc1)) )
+  :precondition (and (Em ?loc1) (Corredor ?loc1) (Sala ?loc2) (TintaAzul ?loc1))
+  :effect       (and (Em ?loc2) (not (Em ?loc1))              (TintaAzul ?loc2) (not (TintaAzul ?loc1)) )
  )
 
  (:action mover_tinta_3 :parameters (?loc1 ?loc2)
-  :precondition (and (Em ?loc1) (Sala ?loc1) (Corredor ?loc2) (Tinta ?loc1))
-  :effect       (and (Em ?loc2) (not (Em ?loc1))              (Tinta ?loc2) (not (Tinta ?loc1)) )
+  :precondition (and (Em ?loc1) (Sala ?loc1) (Corredor ?loc2) (TintaAzul ?loc1))
+  :effect       (and (Em ?loc2) (not (Em ?loc1))              (TintaAzul ?loc2) (not (TintaAzul ?loc1)) )
  )
 )

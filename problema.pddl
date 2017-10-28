@@ -6,7 +6,9 @@
        (Em Deposito1)
 
        ;Define que a escada esta guardada inicialmente no deposito, assim como a tinta
-       (Escada Deposito1) (Tinta Deposito1)
+       ;Assumimos como premissa que o pincel está na propria lata (azul) e que ter
+       ;o robo e a lata no mesmo comodo, implica que ele já está segurando o pincel.
+       (Escada Deposito1) (TintaAzul Deposito1) (TintaVermelha Deposito1)
 
        ;Define que todas as salas inicialmente estao pintadas de branco
        (Branca Sala1) (Branca Sala2) (Branca Sala3) (Branca Sala4)
