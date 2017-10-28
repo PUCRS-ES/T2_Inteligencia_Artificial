@@ -1,12 +1,12 @@
 (define (problem problema) 
 (:domain dominio) 
 (:objects Sala1 Sala2 Sala3 Sala4 Corredor1 Deposito1)
-(:init 
+(:init
        ;Define que o robo inicia no deposito
        (Em Deposito1)
 
-       ;Define que a escada esta guardada inicialmente no deposito
-       (Escada Deposito1)
+       ;Define que a escada esta guardada inicialmente no deposito, assim como a tinta
+       (Escada Deposito1) (Tinta Deposito1)
 
        ;Define que todas as salas inicialmente estao pintadas de branco
        (Branca Sala1) (Branca Sala2) (Branca Sala3) (Branca Sala4)
